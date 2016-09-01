@@ -2,14 +2,14 @@
 #include "WriteFile.h"
 #include "String.h"
 #include "Tokens.h"
-// comment
+
 #include <iostream>
 int main()
 {
    ReadFile* rf = new ReadFile("cds.txt");
    WriteFile* wf = new WriteFile("out.txt");
 
-   while(!rf->eof())
+   while(!rf->eof()) // comment
    {
       String* line = rf->readLine();
       wf->writeLine(line);
