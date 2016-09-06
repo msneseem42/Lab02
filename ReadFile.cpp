@@ -2,14 +2,12 @@
 #include <iostream>
 #include <string>
 
-ReadFile* ReadFile::createReadFile(const char* file_name)
+ReadFile* ReadFile::ReadFile(const char* file_name)
 {
-   ReadFile* rf = new ReadFile;
-
    rf->input_file.open(file_name);
    rf->closed = false;
    rf->_eof = false;
-
+   
    return rf;
 }
 
