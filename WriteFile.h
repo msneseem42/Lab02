@@ -12,7 +12,7 @@ class WriteFile
 		ofstream output_file;
 		bool closed;
 	public:
-		WriteFile* createWriteFile(const char* file_name);
+		WriteFile::WriteFile(const char* file_name) // constructor
 		void destroyWriteFile(WriteFile* wf);
 		void writeLine(WriteFile* wf, String* line);
 		void close(WriteFile* wf);
