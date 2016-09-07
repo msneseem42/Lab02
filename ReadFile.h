@@ -16,7 +16,7 @@ class ReadFile
 		bool closed;
 	
 	public:
-		ReadFile* ReadFile(const char* file_name);
+		ReadFile* createReadFile(const char* file_name);
 		void destroyReadFile(ReadFile* rf);
 		String* readLine(ReadFile* rf);
 		bool eof(ReadFile* rf);

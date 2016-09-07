@@ -1,11 +1,12 @@
 #include "WriteFile.h"
 #include <sstream>
 
-WriteFile* WriteFile::WriteFile(const char* file_name) // constructor
+WriteFile* WriteFile::WriteFile(const char* file_name) 
 {
-   wf->output_file.open(file_name);
-   wf->closed = false;
-   return wf;
+	WriteFile* wf = new WriteFile;
+    wf->output_file.open(file_name);
+    wf->closed = false;
+    return wf;
 }
 
 void WriteFile::destroyWriteFile(WriteFile* wf)
